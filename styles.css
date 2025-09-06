@@ -1,0 +1,38 @@
+#name {
+    color: blue;
+}
+
+.navbar {
+  display: flex;              /* row layout */
+  align-items: center;        /* vertical centering */
+  justify-content: space-between; /* name on left, links on right */
+  background-color: #f2f2f2;  /* optional */
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navbar h5 {
+  margin: 0;
+  font-size: 18px;
+  color: blue;
+}
+
+.navbar ul {
+  list-style: none;   /* removes bullets */
+  display: flex;      /* makes links horizontal */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;  /* spacing between links */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
