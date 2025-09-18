@@ -37,6 +37,14 @@
   font-weight: bold;
 }
 
+.navbar button {
+  margin-top: auto; /* pushes button to bottom of sidebar */
+  padding: 10px 15px;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 
 body {
   background: radial-gradient(#f5f5dc, #d2b48c);
