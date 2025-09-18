@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service</title>
+  <link id="themeStylesheet" rel="stylesheet" href="light.css">
 </head>
 <body>
-    <div class="navbar">
-        <h5>Orlando Haye</h5>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="qualifications.html">Qualifications</a></li>
-            <li><a href="service.html" class="active">Service</a></li>
-            <li><a href="genai.html">GenAI</a></li>
-        </ul>
-    </div>
-    <h3>Virtual Introduction to Python Peer Mentor</h3>
-    <p>Mentored 3 new coders through group sessions and 1:1 support during a virtual Python bootcamp; explained core
- concepts and walked students through problem-solving strategies live during lectures.</p>
- <img src="Images/peerMentor.jpg"
-        alt="Peer Mentoring"
-        width="300">
+  <div class="navbar">
+    <h5>Orlando Haye</h5>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+      <li><a href="service.html" class="active">Service</a></li>
+      <li><a href="genai.html">GenAI</a></li>
+      <button onclick="switchCSS()">🌙 / ☀️</button>
+    </ul>
+  </div>
+
+  <main class="content-container">
+        <section class="projects-section">
+            <h2>Virtual Introduction to Python Peer Mentor</h2>
+            <div class="project-list">
+                <article class="project-card">
+                    <div class="project-text">
+                        <p>Mentored 3 new coders through group sessions and 1:1 support during a virtual Python bootcamp; 
+        explained core concepts and walked students through problem-solving strategies live during lectures.</p>
+                    </div>
+                    <img src="Images/peerMentor.jpg" alt="Peer Mentoring" class="project-image">
+                </article>
+            </div>
+        </section>
+    </main>
+
+  <script src="themes.js"></script>
 </body>
 </html>

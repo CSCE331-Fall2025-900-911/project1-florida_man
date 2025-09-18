@@ -1,21 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GenAI Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: radial-gradient(#f5f5dc, #d2b48c);
+    }
+
+    p {
+      color: maroon
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f2f2f2;
+      padding: 10px 20px;
+    }
+
+    .navbar h5 {
+      margin: 0;
+      font-size: 18px;
+      color: maroon;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .navbar a.active {
+      font-weight: bold;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: maroon
+    }
+
+    .songs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .song-card {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .song-card iframe {
+      width: 100%;
+      height: 152px;
+      border-radius: 12px;
+    }
+
+    .prompt {
+      margin: 30px auto;
+      padding: 20px;
+      border: 2px dashed #666;
+      max-width: 500px;
+      background: #fff;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .music-icons {
+      font-size: 2rem;
+      margin: 0 15px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; /* spacing between notes and title */
+    }
+
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <h5>Orlando Haye</h5>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="qualifications.html">Qualifications</a></li>
-            <li><a href="service.html">Service</a></li>
-            <li><a href="genai.html" class="active">GenAI</a></li>
-        </ul>
+
+  <div class="navbar">
+    <h5>Orlando Haye</h5>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="qualifications.html">Qualifications</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="genai.html" class="active">GenAI</a></li>
+    </ul>
+  </div>
+
+  <div class="title">
+  <span class="music-icons">🎵</span>
+  <h1>AI Page</h1>
+  <span class="music-icons">🎵</span>
+</div>
+
+
+  <div class="songs">
+    <div class="song-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0AOvNRgl0SMfOibWA5bP8o?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>Money Trees - Kendrick Lamar</p>
     </div>
+    <div class="song-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2g6tReTlM2Akp41g0HaeXN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>Die Hard - Kendrick Lamar</p>
+    </div>
+  </div>
+
+  <div class="prompt">
+    Create an HTML + CSS webpage with a top navigation bar. On the left it should say 'Orlando Haye' and on the right there should be links: Home, 
+    Portfolio, Qualifications, Service, and GenAI (with GenAI highlighted as active). Below the navbar, add a centered title that says 'AI Page' with 
+    music note emojis 🎵 on each side. Under that, make a 2-column grid with two containers, each containing a Spotify embedded player (using iframe embeds)
+     and a label like 'Fav Song #1' and 'Fav Song #2'. Below that grid, add a centered box with dashed borders containing the word 'Prompt'. 
+     Finally, add another 2-column grid with two more Spotify embedded songs labeled 'Fav Song #3' and 'Fav Song #4'. Style the page with a light radial
+      gradient background, rounded song containers with shadows, and a clean modern layout
+  </div>
+
+  <div class="songs">
+    <div class="song-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0oG6bJKzXgqzsaaEy1M510?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>Keeper - Giveon</p>
+    </div>
+    <div class="song-card">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3HBZIY3FVzXu6YjhExNqWe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>Vixen - Miguel</p>
+    </div>
+  </div>
+
 </body>
 </html>

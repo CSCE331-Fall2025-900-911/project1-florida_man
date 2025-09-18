@@ -2,10 +2,9 @@
 <html>
 <head>
 <title>Orlando Haye's Webpage</title>
-<link rel="stylesheet" href="styles.css">
+<link id="themeStylesheet" rel="stylesheet" href="light.css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
-
 <body>
 
   <div class="navbar">
@@ -16,32 +15,37 @@
       <li><a href="qualifications.html">Qualifications</a></li>
       <li><a href="service.html">Service</a></li>
       <li><a href="genai.html">GenAI</a></li>
+      <button onclick="switchCSS()">🌙 / ☀️</button>
     </ul>
   </div>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="center"><h3 id="name">About Me</h3></td>
-  </tr>
-  <tr>
-    <td align="center"><br><br>Hello! I'm Orlando Haye, a passionate Junior Computer Science Major attending Texas A&M University, and I am from Houston, TX. I enjoy building or being a part of full stack projects and constantly learning new technologies.
 
-If I want to have fun, you can find me watching and playing basketball, skateboarding with friends, producing music (my favorite genre is hip-hop), and playing video games.
+  <main class="content-container">
+        <section class="about-me-section">
+            <h2>About Me</h2>
+            <div class="profile-card">
+                <img src="Images/Orlando_Haye_TAMU_HS (2).jpg" alt="Profile picture" class="profile-pic">
+                <p>Howdy! I'm Orlando Haye, a passionate Junior Computer Science Major attending Texas A&M University. I am from Houston, TX, and I enjoy
+                   building or being a part of full stack projects and constantly learning new technologies. I have a passion for Artificial Intelligence because
+                   the idea of intelligent machines and futuristic technologies inspires me to explore how AI can be applied in real-world scenarios. One area I’m especially excited about is medical technology, because it shows how innovation in AI can directly improve lives through better healthcare and accessibility. Furthermore, this curiosity
+                   evolved from my interest in robotics and science fiction that imagined advanced technology changing the world. Over time, I realized that AI is not just a futuristic dream but an active field with countless opportunities for innovation.<br> <br>
+My interest in technology started at an early age where I was always interested in video games and how they worked behind the scenes. This grew into programming experiments, small projects, and the slow discovery of joy through problem solving through code. Troubleshooting always felt like conversing with the computer, and new concepts fueled my curiosity even more. Thus, I knew Computer Science was the right path for me. <br> <br>
+When I’m not coding, you can usually find me watching and playing basketball, skateboarding with friends, producing music (my favorite genre is hip-hop), or playing video games. These hobbies keep me creative and remind me of the values that teamwork, persistence and experimentation offer. <br> <br>
+I’ve always wanted to become a developer, and very class, project, or collaboration brings me closer to that goal. Whether it’s backend, frontend, full stack, cloud, or game development, I enjoy the challenge of solving problems and expressing creativity through technology. In the future, I hope to use my skills to contribute to innovative AI solutions, work on impactful projects, and inspire others who share the same passion. I’m Orlando, and I could be your new favorite developer! 
+</p>
+            </div>
+        </section>
 
-I have always wanted to be a developer since I was very young, so I get excited at each step I take towards that dream. Whether it be backend, frontend, fullstack, the cloud, or game development, challenging myself with programming problems, while allowing my personality and creativity to seep through is always exciting.
+        <section class="contact-me-section">
+            <h2>Contact Me</h2>
+            <ul>
+              <li>School Email: florida_man@tamu.edu</li>
+              <li>Email: ohaye456@gmail.com</li>
+              <li>Cell-Phone: 346-366-8625</li>
+            </ul>
+        </section>
+    </main>
 
-I'm Orlando, and I could be your new favorite developer!</td>
-  </tr>
-</table>
 
-<img src="Images/Orlando_Haye_TAMU_HS (2).jpg" 
-     alt="Orlando Haye Professional Photo" 
-     width="300">
-
-<h2>Contact Me!</h2>
-<ul>
-  <li>School Email: florida_man@tamu.edu</li>
-  <li>Email: ohaye456@gmail.com</li>
-  <li>Cell-Phone: 346-366-8625</li>
-</ul>
+<script src="themes.js"></script>
 </body>
 </html>

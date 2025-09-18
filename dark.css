@@ -1,7 +1,3 @@
-#name {
-    color: blue;
-}
-
 .navbar {
   display: flex;              /* row layout */
   align-items: center;        /* vertical centering */
@@ -35,4 +31,8 @@
 
 .navbar a.active {
   font-weight: bold;
+}
+
+body {
+  background-color: blue;
 }

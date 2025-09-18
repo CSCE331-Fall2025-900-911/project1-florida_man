@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="themeStylesheet" rel="stylesheet" href="light.css">
 </head>
 <body>
     <div class="navbar">
@@ -15,18 +15,69 @@
             <li><a href="qualifications.html" class="active">Qualifications</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="genai.html">GenAI</a></li>
+            <button onclick="switchCSS()">🌙 / ☀️</button>
         </ul>
     </div>
+    
+    <div class="content-container">
+        
+        <section>
+            <h2>Qualifications</h2>
+            <div class="qualifications-grid">
+                
+                <div class="skills-block">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>SQL></li>
+                        <li>C#</li>
+                        <li>Haskell</li>
+                        <li>R Programming Language</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>Web Scraping</li>
+                        <li>Express.js</li>
+                        <li>Node.js</li>
+                        <li>React.js</li>
+                        <li>Bootstrap</li>
+                        <li>mySQL</li>
+                        <li>MongoDB</li>
+                        <li>AWS</li>
+                        <li>NLP</li>
+                        <li>Flask</li>
+                        <li>JavaFx</li>
+                        <li>Gluon Scene Builder</li>
+                        <li>Figma</li>
+                        <li>Arduino</li>
+                        <li>Visual Studio Code</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                
+                <div class="interest-block">
+                    <h3>Area of Interest</h3>
+                    <p>I am interested in Medical Technology and Artificial Intelligence. Medical technology intrigues me because I want to blend my passions for
+                         healing people, coding, and biology together. I am also heavily interested in AI due to the capabilities of it. Such that I want to assist
+                        in devloping it's potential.</p>
+                    <img src="/Images/AreaOfInterest.jpg" alt="Bioinformatics" class="interest-image">
+                </div>
+                
+            </div>
+        </section>
+        
+        <section>
+            <h2>Resume</h2>
+            <iframe src="https://drive.google.com/file/d/1BQZxGHYJ0KEghLzcc-5ypqkZo9GcLJpX/preview"
+                width="100%" 
+                height="600px" 
+                allow="autoplay">
+            </iframe>
+        </section>
+        
+    </div>
 
-    <iframe src="https://drive.google.com/file/d/1BQZxGHYJ0KEghLzcc-5ypqkZo9GcLJpX/preview"
-        width="640" 
-        height="480" 
-        allow="autoplay">
-    </iframe>
-    <h3>Area of Interest</h3>
-    <p>I am intersted in MedTech I want to blend my passions for healing people, coding, and biology together. I am also heavily interested in AI due to robotics and science fiction.</p>
-    <h3>Skills</h3>
-    <p>Python, SQL, Java, C++, C#, Haskell, HTML/CSS, R Programming Language, JavaScript, Web Scraping, mySQL, MongoDB, AWS, NLP, Node.js, Express.js, React.js, Bootstrap, Flask, JavaFx, Gluon
- Scene Builder, Figma, Arduino, Visual Studio Code, GitHub</p>
+    <script src="themes.js"></script>
 </body>
 </html>

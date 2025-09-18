@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link id="themeStylesheet" rel="stylesheet" href="light.css">
 </head>
 <body>
     <div class="navbar">
@@ -15,44 +15,58 @@
             <li><a href="qualifications.html">Qualifications</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="genai.html">GenAI</a></li>
+            <button onclick="switchCSS()">🌙 / ☀️</button>
         </ul>
     </div>
-<h3>Personal Portfolio Website</h3>
-<ul>
-    <li>Designed and developed a personal portfolio using React, Vite, and GitHub Pages; highlights key projects and skills
+
+    <main class="content-container">
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <article class="project-card">
+                    <div class="project-text">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>Designed and developed a personal portfolio using React, Vite, and GitHub Pages; highlights key projects and skills
  in a responsive, mobile-friendly layout. Deployed independently to demonstrate frontend design, self-direction, and
- deployment skills.</li>
-    <li><a href="https://orlandoh27.github.io/">Link to site</a></li>\
-    <li>
-        <img src="Images/Website.png"
-            alt="Portfolio Website"
-            width="600">
-    </li>
-</ul>
-
-<h3>Spotify Map</h3>
-<ul>
-    <li>Web application that generates a 3D-visual map of the co-occurrences between Spotify Playlists to find recommendations for a user. 
+ deployment skills.</p>
+                        <a href="https://orlandoh27.github.io/" class="github-link" target="_blank">GitHub Link</a>
+                    </div>
+                    <img src="Images/Website.png" alt="Project 1" class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-text">
+                        <h3>Spotfiy Map</h3>
+                        <p>Web application that generates a 3D-visual map of the co-occurrences between Spotify Playlists to find recommendations for a user. 
         Implemented using the Node2Vec Python algorithm and Spotify’s integrated API and authentication. Our team is currently looking at other graph
-         algorithms to increase scalability.</li>
-    <li><a href='https://github.com/aggie-coding-club/Spotify-Playlist-Map'>GitHub</a></li>
-</ul>
-
-<h3>Aggie Parts Picker</h3>
-<ul>
-    <li>Using a database that’s automatically populated with recipe information, alongside its generated embedding, from web scraping websites in 
+         algorithms to increase scalability.</p>
+                        <a href="https://github.com/aggie-coding-club/Spotify-Playlist-Map" class="github-link" target="_blank">GitHub Link</a>
+                    </div>
+                    <img src="Images/SpotifyMap.png" alt="Project 2" class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-text">
+                        <h3>Aggie Parts Picker</h3>
+                        <p>Using a database that’s automatically populated with recipe information, alongside its generated embedding, from web scraping websites in 
 order to use RAG to create an AI model that can intuitively respond to text queries from the users about recipes of interest. The AI model then 
 outputs recipe information that can be sorted into meal plans (ingredients from stores or restaurants), which are then sorted into the user’s school
- schedule, adjusting for travel time and distance using Google Maps API. This project is a web app created using React.</li>
-    <li><a href='https://github.com/hh24teamX'>GitHub</a></li>
-</ul>
+ schedule, adjusting for travel time and distance using Google Maps API. This project is a web app created using React.</p>
+                        <a href="https://github.com/hh24teamX" class="github-link" target="_blank">GitHub Link</a>
+                    </div>
+                    <img src="Images/APP.png" alt="Project 3" class="project-image">
+                </article>
+                <article class="project-card">
+                    <div class="project-text">
+                        <h3>TBD Engine</h3>
+                        <p>Created a game engine from scratch in C++ similar to Unity. I participated in the Physics team and was responsible
+     for implementing how objects would interact with other objects and their environment.</p>
+                        <a href="https://github.com/aggie-coding-club/Engine-12" class="github-link" target="_blank">GitHub Link</a>
+                    </div>
+                    <img src="/Images/gameEngine.png" alt="Project 3" class="project-image">
+                </article>
+            </div>
+        </section>
+    </main>
 
-<h3>TBDEngine</h3>
-<ul>
-    <li>Created a game engine from scratch in C++ similar to Unity. I participated in the Physics team and was responsible
-     for implementing how objects would interact with other objects and their environment.</li>
-    <li><a href="https://github.com/aggie-coding-club/Engine-12">GitHub</a></li>
-</ul>
-
+    <script src="themes.js"></script>
 </body>
 </html>
