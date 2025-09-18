@@ -10,102 +10,107 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      background: radial-gradient(#f5f5dc, #d2b48c);
-    }
-
-    p {
-      color: maroon
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #f2f2f2;
-      padding: 10px 20px;
-    }
-
-    .navbar h5 {
-      margin: 0;
-      font-size: 18px;
+      background: radial-gradient(circle, #f5f5dc, #d2b48c);
       color: maroon;
     }
 
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar h5 {
+      margin: 0;
+    }
     .navbar ul {
       list-style: none;
       display: flex;
       margin: 0;
       padding: 0;
     }
-
     .navbar li {
       margin-left: 20px;
     }
-
     .navbar a {
       text-decoration: none;
-      color: black;
+      color: maroon;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .navbar a.active {
+      background-color: maroon;
+      color: white;
     }
 
-    .navbar a.active {
+    /* Title */
+    .page-title {
+      font-size: 3em;
+      margin: 40px 0;
+    }
+
+    /* Grid */
+    .song-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+    }
+
+    /* Song Card */
+    .song-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .song-card iframe {
+      border-radius: 10px;
+    }
+    .song-title {
+      margin-top: 10px;
       font-weight: bold;
     }
 
-    h1 {
-      margin: 20px 0;
-      font-size: 2.5rem;
-      color: maroon
-    }
-
-    .songs {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-    }
-
-    .song-card {
-      background: white;
-      border: 2px solid #ccc;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .song-card iframe {
-      width: 100%;
-      height: 152px;
-      border-radius: 12px;
-    }
-
-    .prompt {
-      margin: 30px auto;
+    /* Prompt Box */
+    .prompt-box {
+      background-color: white;
+      border: 2px dashed maroon;
+      border-radius: 10px;
       padding: 20px;
-      border: 2px dashed #666;
-      max-width: 500px;
-      background: #fff;
-      border-radius: 12px;
-      font-size: 1.1rem;
+      margin: 40px auto;
+      max-width: 900px;
       font-style: italic;
     }
 
-    .music-icons {
-      font-size: 2rem;
-      margin: 0 15px;
+    @media (max-width: 600px) {
+      .page-title {
+        font-size: 2em;
+      }
+      .navbar ul {
+        flex-direction: column;
+      }
+      .navbar li {
+        margin: 10px 0 0 0;
+      }
     }
-
-    .title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px; /* spacing between notes and title */
-    }
-
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <div class="navbar">
     <h5>Orlando Haye</h5>
     <ul>
@@ -117,41 +122,49 @@
     </ul>
   </div>
 
-  <div class="title">
-  <span class="music-icons">🎵</span>
-  <h1>AI Page</h1>
-  <span class="music-icons">🎵</span>
-</div>
+  <!-- Title -->
+  <div class="page-title">🎵 AI Page 🎵</div>
 
-
-  <div class="songs">
+  <!-- Song Grid - First Row -->
+  <div class="song-grid">
     <div class="song-card">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0AOvNRgl0SMfOibWA5bP8o?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p>Money Trees - Kendrick Lamar</p>
+      <iframe src="https://open.spotify.com/embed/track/0AOvNRgl0SMfOibWA5bP8o" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="song-title">Money Trees – Kendrick Lamar</div>
     </div>
     <div class="song-card">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2g6tReTlM2Akp41g0HaeXN?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p>Die Hard - Kendrick Lamar</p>
+      <iframe src="https://open.spotify.com/embed/track/2g6tReTlM2Akp41g0HaeXN" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="song-title">Die Hard – Kendrick Lamar</div>
     </div>
   </div>
 
-  <div class="prompt">
-    Create an HTML + CSS webpage with a top navigation bar. On the left it should say 'Orlando Haye' and on the right there should be links: Home, 
-    Portfolio, Qualifications, Service, and GenAI (with GenAI highlighted as active). Below the navbar, add a centered title that says 'AI Page' with 
-    music note emojis 🎵 on each side. Under that, make a 2-column grid with two containers, each containing a Spotify embedded player (using iframe embeds)
-     and a label like 'Fav Song #1' and 'Fav Song #2'. Below that grid, add a centered box with dashed borders containing the word 'Prompt'. 
-     Finally, add another 2-column grid with two more Spotify embedded songs labeled 'Fav Song #3' and 'Fav Song #4'. Style the page with a light radial
-      gradient background, rounded song containers with shadows, and a clean modern layout
+  <!-- Prompt Box -->
+  <div class="prompt-box">
+    "Create a complete HTML page with embedded CSS. The page should have a top navigation bar with 'Orlando Haye' on the left and links 'Home' = index.html, 'Portfolio' = portfolio.html, 'Qualifications' = qualifications.html, 'Service' = service.html, and 'GenAI' = genai.html on the right, with 'GenAI' styled as active. Below the navbar, center a maroon title reading 'AI Page' with music note emojis 🎵 on each side.
+
+Add a responsive 2-column grid of song cards with four specific Spotify embed iframes:
+
+'Money Trees' by Kendrick Lamar – https://open.spotify.com/embed/track/0AOvNRgl0SMfOibWA5bP8o
+
+'Die Hard' by Kendrick Lamar – https://open.spotify.com/embed/track/2g6tReTlM2Akp41g0HaeXN
+
+'Keeper' by Giveon – https://open.spotify.com/embed/track/0oG6bJKzXgqzsaaEy1M510
+
+'Vixen' by Miguel – https://open.spotify.com/embed/track/3HBZIY3FVzXu6YjhExNqWe
+
+Each card should have a white background, rounded corners, subtle shadow, and the song title below the iframe. Between the first and second row, insert a centered dashed box with a white background containing italic text that displays this prompt itself.
+
+Style the page with a radial gradient background from #f5f5dc to #d2b48c. Headings and paragraphs should be maroon. Make the layout clean, modern, visually balanced, and mobile-friendly. Ensure the grid is responsive and all elements maintain consistent spacing and alignment."
   </div>
 
-  <div class="songs">
+  <!-- Song Grid - Second Row -->
+  <div class="song-grid">
     <div class="song-card">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0oG6bJKzXgqzsaaEy1M510?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p>Keeper - Giveon</p>
+      <iframe src="https://open.spotify.com/embed/track/0oG6bJKzXgqzsaaEy1M510" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="song-title">Keeper – Giveon</div>
     </div>
     <div class="song-card">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/3HBZIY3FVzXu6YjhExNqWe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p>Vixen - Miguel</p>
+      <iframe src="https://open.spotify.com/embed/track/3HBZIY3FVzXu6YjhExNqWe" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="song-title">Vixen – Miguel</div>
     </div>
   </div>
 
