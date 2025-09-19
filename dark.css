@@ -1,38 +1,240 @@
+
+/* === GLOBAL & LAYOUT STYLES === */
+
+body {
+    background: maroon;
+    margin-left: 250px;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.content-block {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* === NAVBAR (NOW A SIDEBAR) STYLES === */
+
+.name {
+    color: white;
+}
+
 .navbar {
-  display: flex;              /* row layout */
-  align-items: center;        /* vertical centering */
-  justify-content: space-between; /* name on left, links on right */
-  background-color: #f2f2f2;  /* optional */
-  padding: 10px 20px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 30px 20px;
+    background-color: #550000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar h5 {
-  margin: 0;
-  font-size: 18px;
-  color: blue;
+    margin: 0;
+    font-size: 18px;
+    color: #F1E5AC;
+    margin-bottom: 40px; 
 }
 
 .navbar ul {
-  list-style: none;   /* removes bullets */
-  display: flex;      /* makes links horizontal */
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li {
-  margin-left: 20px;  /* spacing between links */
+    margin-left: 0;
 }
 
 .navbar a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: #F1E5AC;
+    display: block;
+    padding: 10px 0;
 }
 
 .navbar a.active {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-body {
-  background-color: blue;
+.navbar button {
+    margin-top: auto;
+    padding: 50px 15px;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #F1E5AC;
+    color: white;
+    border-radius: 5px;
+}
+
+/* === MAIN CONTENT SECTIONS === */
+
+.content-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #F1E5AC;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: maroon;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* === ABOUT ME PAGE === */
+
+.profile-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid maroon;
+}
+
+.contact-me-section li {
+  color: maroon;
+}
+
+/* === PROJECTS PAGE === */
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    color: maroon
+}
+
+.project-text {
+    flex: 1;
+    text-align: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.github-link {
+    display: block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* === QUALIFICATIONS PAGE === */
+
+.qualifications-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.interest-block {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.skills-block {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.interest-block h3 {
+    color: maroon;
+}
+
+.skills-block h3 {
+    color: maroon
+}
+
+.interest-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.resume-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-link:hover {
+    background-color: #218838;
+}
+
+/* === SERVICES PAGE === */
+
+.service-block {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
