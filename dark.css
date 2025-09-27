@@ -190,6 +190,12 @@ h2 {
     background-color: #fff;
 }
 
+.skills-block ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .interest-block h3 {
     color: maroon;
 }
